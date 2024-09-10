@@ -1,0 +1,207 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    font-family: inherit;
+    color: #6B7280;
+}
+
+.page-container {
+    max-width: 100%;
+    margin: -25px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.different-color-section {
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px; 
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav li {
+    margin-right: 20px;
+}
+nav a {
+    color: #337ab7;
+    text-decoration: none;
+}
+nav a.active {
+    color: #23527c;
+    font-weight: bold;
+}
+/* Updated styles for dropdown */
+
+.user-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.user-dropdown span {
+    margin-right: 10px;
+    color: #6B7280 !important;
+}
+
+.user-dropdown svg {
+    width: 20px;
+    height: 20px;
+    fill: #337ab7; /* match link color */
+    transition: transform 0.3s ease; /* smooth animation */
+    color: #6B7280 !important;
+}
+
+.user-dropdown:hover svg {
+    transform: translateY(-2px);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 25px;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    padding: 10px;
+    z-index: 1;
+    border-radius: 5px;
+    min-width: 150px; /* adjust as necessary */
+    text-align: left;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-content a {
+    display: block;
+    color: #6B7280 !important;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease; /* smooth animation */
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0; /* hover background color */
+    color: #23527c; /* hover text color */
+}
+
+.user-dropdown.active svg {
+    transform: rotate(180deg); /* rotate icon when dropdown is active */
+}
+
+.user-dropdown.active .dropdown-content {
+    display: block; /* show dropdown when active */
+}
+
+.dropdown-content li {
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+.dropdown-content a {
+    color: #337ab7;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.dropdown-content a:hover {
+    color: #23527c;
+    background-color: #f7f7f7;
+}
+.dropdown-link {
+    padding: 10px;
+    display: block;
+}
+.dropdown-link i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.max-w-full {
+    width: 95% !important;
+    margin-top: 5%;
+    margin-left: 10px !important;
+    border-radius: 10px;
+}
+.update-button {
+    width: 80px!important;
+    background-color: #000!important;
+    color: #fff!important;
+    padding: 8px 12px!important;
+    border: none!important;
+    border-radius: 5px!important;
+    cursor: pointer!important;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+  }
+  
+  .loader.show {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .loader-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loader-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #333;
+    margin: 5px;
+    animation: loader-circle 1.5s infinite;
+  }
+  
+  .loader-circle:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .loader-circle:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  
+  .loader-circle:nth-child(3) {
+    animation-delay: 1s;
+  }
+  
+  @keyframes loader-circle {
+    0% {
+      transform: scale(0.5);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(0.5);
+    }
+  }
